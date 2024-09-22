@@ -1,0 +1,92 @@
+<head>
+    <style>
+        * {
+            background-color: antiquewhite;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        #swas {
+            color: rgb(99, 209, 209);
+        }
+
+        .controls {
+            display:inline ;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        input[type="range"].vertical {
+    writing-mode: bt-lr; 
+    width: 20px; 
+    height: 150px; 
+    margin: 10px 20px;
+}
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="swas" width="900" height="600"></canvas>
+        
+        <div class="controls">
+            <label for="xRotation">X Rotation:</label>
+            <input type="range" id="xRotation" min="0" max="360" value="0">
+            
+            <label for="yRotation">Y Rotation:</label>
+            <input type="range" id="yRotation" min="0" max="360" value="0">
+
+            <label for="scaleX">Scale X:</label>
+            <input type="range" id="scaleX" min="0.1" max="2" step="0.1" value="1">
+
+            <label for="scaleY">Scale Y:</label>
+            <input type="range" id="scaleY" min="0.1" max="2" step="0.1" value="1">
+
+            <label for="scaleZ">Scale Z:</label>
+            <input type="range" id="scaleZ" min="0.1" max="2" step="0.1" value="1">
+
+            <label for="translateX">Translate X:</label>
+            <input type="range" id="translateX" min="-5" max="5" step="0.1" value="0">
+
+            <label for="translateY">Translate Y:</label>
+            <input type="range" id="translateY" min="-5" max="5" step="0.1" value="0">
+
+            <label for="translateZ">Translate Z:</label>
+            <input type="range" id="translateZ" min="-5" max="5" step="0.1" value="0">
+
+            <label for="cameraDistance">Camera Distance:</label>
+            <input type="range" id="cameraDistance" min="2" max="20" step="0.1" value="6">
+
+            <label for="projectionType">Projection (0: Ortho, 1: Perspective):</label>
+            <input type="range" id="projectionType" min="0" max="1" step="1" value="1">
+
+            <label for="ambientLight">Ambient Light Intensity:</label>
+            <input type="range" id="ambientLight" min="0" max="1" step="0.1" value="0.3">
+
+            <label for="lightX">Light X Position:</label>
+            <input type="range" id="lightX" min="-10" max="10" step="0.1" value="1">
+
+            <label for="lightY">Light Y Position:</label>
+            <input type="range" id="lightY" min="-10" max="10" step="0.1" value="5">
+
+            <label for="lightZ">Light Z Position:</label>
+            <input type="range" id="lightZ" min="-10" max="10" step="0.1" value="3">
+        </div>
+    </div>
+    <script src="gl-matrix.js"></script>
+</body>
+
+<script src="triangle.js">
+
+</script>
